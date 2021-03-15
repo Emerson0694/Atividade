@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Exercicio03;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Emerson
+ */
+public class Funcionario2 {
+
+int opc = 0;
+Funcionario f = null;
+String Nome;
+int Cracha;
+char ValorHora, TipoVinculo = 0;
+float QtdeHoras, Salario, ValorDesconto;
+
+while(opc != 4){
+ opc = Integer.parseInt(JOptionPane.showInputDialog("1 - Criar Funcionario\n2 - Mostrar Pagamento\n3 - Mostrar Remuneração\n4 - Sair"));
+ switch (opc){
+     case 1:
+         Nome = JOptionPane.showInputDialog("Nome");
+         Cracha = Integer.parseInt(JOptionPane.showInputDialog("Cracha"));
+         ValorHora = JOptionPane.showInputDialog("ValorHora").charAt(0);
+         TipoVinculo = JOptionPane.showInputDialog("TipoVinculo").charAt(0);
+         QtdeHoras = Float.parseFloat(JOptionPane.showInputDialog("QtdeHoras"));
+         Salario = Float.parseFloat(JOptionPane.showInputDialog("Salario"));
+         ValorDesconto = Float.parseFloat(JOptionPane.showInputDialog("ValorDesconto")); 
+         break;
+     case 2:
+         JOptionPane.showInputDialog(null, f.imprimir());
+         break;
+     case 3:
+         
+         for(TipoVinculo = "H"){
+             System.out.println(ValorHora * QtdeHora) - ValorDescoto;
+         
+          }
+ }
+}
+}
+

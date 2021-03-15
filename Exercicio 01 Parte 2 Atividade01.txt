@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Exercicio01;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Emerson
+ */
+public class pessoa2 {
+    
+    int opc = 0;
+    pessoa p = null;
+    String cpf, nome;
+    int idade;
+    char sexo;
+    
+    while(opc != 3){
+       opc = Integer.parseInt(JOptionPane.showInputDialog("1. Criar Pessoa\n2 - Mostrar Pessoa\n3 - Sair"));
+       switch (opc){
+           case 1: break;
+            cpf = JOptionPane.showInputDialog("Cpf");
+            nome = JOptionPane.showInputDialog("Nome");
+            idade = Integer.parseInt(JOptionPane.showInputDialog("Idade"));
+            sexo =  JOptionPane.showInputDialog("Sexo").charAt(0);
+            p = new pessoa();
+            p.setCpf(cpf);
+            p.setNome(nome);
+            p.setIdade(idade);
+            p.setSexo(sexo);
+           case 2: break;
+            JOptionPane.showMessageDialog(null, p.imprimir());
+           case 3: break;
+           default: break;
+       }
+}
+}

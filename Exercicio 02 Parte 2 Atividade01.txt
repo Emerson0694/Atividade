@@ -1,0 +1,46 @@
+
+package Exercicio2.Aluno;
+
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Emerson
+ */
+public class aluno2 {
+    
+    public static void main(String[] args){
+        
+        int opc = 0; 
+        String ra, nome; 
+        float ac1, ac2, ag, af;
+        aluno aluno = null;
+        while (opc != 3){
+        opc = Integer.parseInt(
+        JOptionPane.showInputDialog("1 - criar Aluno\n2 - Mostar Aluno\n3 - Sair") );
+        switch (opc){
+            case 1: 
+                ra = JOptionPane.showInputDialog("RA");
+                nome = JOptionPane.showInputDialog("Nome");
+                ac1 = Float.parseFloat(JOptionPane.showInputDialog("AC1")); 
+                ac2 = Float.parseFloat(JOptionPane.showInputDialog("AC2"));
+                ag = Float.parseFloat(JOptionPane.showInputDialog("AG"));
+                af = Float.parseFloat(JOptionPane.showInputDialog("AF"));
+                aluno = new aluno(ra);
+                
+                aluno.setNome(nome);
+                aluno.setAc1(ac1);
+                aluno.setAc2(ac2);
+                aluno.setAf(af);
+                aluno.setAg(ag); 
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, aluno.imprimir());
+                break;
+            case 3: break;
+            
+            
+                default: break;
+        }
+    }
+    }
+}

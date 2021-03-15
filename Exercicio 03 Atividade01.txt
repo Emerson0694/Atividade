@@ -1,0 +1,124 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Exercicio03;
+
+/**
+ *
+ * @author Emerson
+ */
+public class Funcionario {
+    
+    private String Nome;
+    private int Cracha;
+    private char ValorHora;
+    private float QtdeHoras;
+    private float Salario;
+    private float ValorDesconto;
+    private char TipoVinculo;
+    
+    public String imprimir(){
+        return "NOME" + getNome() + "\nCracha: " + getCracha() + "\nValorHora: " + getValorHora() + "\nQtdeHoras" + getQtdeHoras() + "\nSalario" + getSalario() + "\nValorDesconto" + getValorDesconto() + "\nTipoVinculo" + getTipoVinculo();
+    }
+
+    /**
+     * @return the Nome
+     */
+    public String getNome() {
+        return Nome;
+    }
+
+    /**
+     * @param Nome the Nome to set
+     */
+    public void setNome(String Nome) {
+        this.Nome = Nome;
+    }
+
+    /**
+     * @return the Cracha
+     */
+    public int getCracha() {
+        return Cracha;
+    }
+
+    /**
+     * @param Cracha the Cracha to set
+     */
+    public void setCracha(int Cracha) {
+        this.Cracha = Cracha;
+    }
+
+    /**
+     * @return the ValorHora
+     */
+    public char getValorHora() {
+        return ValorHora;
+    }
+
+    /**
+     * @param ValorHora the ValorHora to set
+     */
+    public void setValorHora(char ValorHora) {
+        this.ValorHora = ValorHora;
+    }
+
+    /**
+     * @return the QtdeHoras
+     */
+    public float getQtdeHoras() {
+        return QtdeHoras;
+    }
+
+    /**
+     * @param QtdeHoras the QtdeHoras to set
+     */
+    public void setQtdeHoras(float QtdeHoras) {
+        this.QtdeHoras = QtdeHoras;
+    }
+
+    /**
+     * @return the Salario
+     */
+    public float getSalario() {
+        return Salario;
+    }
+
+    /**
+     * @param Salario the Salario to set
+     */
+    public void setSalario(float Salario) {
+        this.Salario = Salario;
+    }
+
+    /**
+     * @return the ValorDesconto
+     */
+    public float getValorDesconto() {
+        return ValorDesconto;
+    }
+
+    /**
+     * @param ValorDesconto the ValorDesconto to set
+     */
+    public void setValorDesconto(float ValorDesconto) {
+        this.ValorDesconto = ValorDesconto;
+    }
+
+    /**
+     * @return the TipoVinculo
+     */
+    public char getTipoVinculo() {
+        return TipoVinculo;
+    }
+
+    /**
+     * @param TipoVinculo the TipoVinculo to set
+     */
+    public void setTipoVinculo(char TipoVinculo) {
+        this.TipoVinculo = TipoVinculo;
+    }
+    
+}
