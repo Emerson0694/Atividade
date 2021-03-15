@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Exercicios;
+
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Emerson
+ */
+public class Apolice2 {
+     
+    public static void main(String[] args){
+        
+        int opc = 0;
+        int numero, idade;
+        String nome;
+        char sexo;
+        double Valorautomotivo;
+        Apolice apolice = null;
+        String msg = "";
+        ArrayList<Apolice> listApolice = new ArrayList<Apolice>();
+        
+        while(opc != 4){
+        opc = Integer.parseInt( 
+                JOptionPane.showInputDialog(" 1 = Criar Apolice\n2 - Mostrar Todos\n3 - Mostrar por numero\n4 - Sair"));
+        
+        switch(opc){
+            case 1: 
+                numero = Integer.parseInt(JOptionPane.showInputDialog("Numero"));
+                nome = JOptionPane.showInputDialog("Nome");
+                idade = Integer.parseInt(JOptionPane.showInputDialog("Idade"));
+                sexo = JOptionPane.showInputDialog("sexo").toUpperCase().charAt(0);
+                Valorautomotivo = Double.parseDouble(JOptionPane.showInputDialog("Valorauto"));
+                apolice = new Apolice(numero, nome, idade, sexo, Valorautomotivo);
+                listApolice.add(apolice);
+                break;
+             
+            case 2:
+                msg = "";    
+                for (Apolice ap: listApolice){
+                        
+                      msg += ap.imprimmir() + "\n---------\n";
+                    }   
+                        JOptionPane.showMessageDialog(null, msg);
+                break;
+            case 3:
+                numero = Integer.parseInt(JOptionPane.showInputDialog("Numoro"));
+                for(Apolice ap: listApolice){
+                    if (ap.getNumero() == numero){
+                        JOptionPane.showMessageDialog(null, ap.imprimmir());
+                    }
+                break;
+            case 4: 
+                break;     
+            }
+                
+         }
+     }
+   
+    }
+}
